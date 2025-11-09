@@ -1,13 +1,16 @@
 {
-    "builds": [
-        {
-        "src": "admin-dashboard/package.json",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "admin-dashboard/dist" }
-        }
-    ],
-    "routes": [
-        { "src": "^/admin-dashboard/(.*)", "dest": "/admin-dashboard/dist/$1" },
-        { "src": "^/admin-dashboard/?$", "dest": "/admin-dashboard/dist/index.html" }
-    ]
+  "builds": [
+    {
+      "src": "admin-dashboard/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "admin-dashboard/dist" }
+    }
+  ],
+  "routes": [
+    { "src": "^/admin-dashboard$", "dest": "/admin-dashboard/dist/index.html" },
+    { "src": "^/admin-dashboard/(.*)", "dest": "/admin-dashboard/dist/$1" }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "/admin-dashboard" }
+  ]
 }

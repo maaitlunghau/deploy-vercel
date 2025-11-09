@@ -1,8 +1,8 @@
 {
-    "name": "deploy-vercel",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "build:nexus": "npm install --prefix admin-dashboard && npm run build --prefix admin-dashboard"
-    }
+  "name": "deploy-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:nexus": "npm install --prefix admin-dashboard && npm run build --prefix admin-dashboard"
+  }
 }
