@@ -6,7 +6,8 @@
         "config": { "distDir": "admin-dashboard/dist" }
         }
     ],
-    "rewrites": [
-        { "source": "/admin-dashboard/(.*)", "destination": "/admin-dashboard/index.html" }
+    "routes": [
+        { "src": "^/admin-dashboard/(.*)", "dest": "/admin-dashboard/dist/$1" },
+        { "src": "^/admin-dashboard/?$", "dest": "/admin-dashboard/dist/index.html" }
     ]
 }
